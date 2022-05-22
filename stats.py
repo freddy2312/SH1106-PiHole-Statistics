@@ -22,14 +22,12 @@ from PIL import ImageFont
 from gpiozero import Button
 from gpiozero import PWMLED
 
-font = ImageFont.truetype('/home/admin/VCR_OSD_MONO_1.001.ttf',15)
-font2 = ImageFont.truetype('/home/admin/VCR_OSD_MONO_1.001.ttf',40)
-font3 = ImageFont.truetype('/home/admin/VCR_OSD_MONO_1.001.ttf',13)
-font4 = ImageFont.truetype('/home/admin/VCR_OSD_MONO_1.001.ttf',11)
-font5 = ImageFont.truetype('/home/admin/Raspi-Schrift.ttf',60)
-# rev.1 users set port=0
-# substitute spi(device=0, port=0) below if using that interface
-# substitute bitbang_6800(RS=7, E=8, PINS=[25,24,23,27]) below if using that interface
+font = ImageFont.truetype('/stats/VCR_OSD_MONO_1.001.ttf',15)
+font2 = ImageFont.truetype('/stats/VCR_OSD_MONO_1.001.ttf',40)
+font3 = ImageFont.truetype('/stats/VCR_OSD_MONO_1.001.ttf',13)
+font4 = ImageFont.truetype('/stats/VCR_OSD_MONO_1.001.ttf',11)
+font5 = ImageFont.truetype('/stats/Raspi-Schrift.ttf',60)
+
 serial = i2c(port=1, address=0x3C)
 
 # substitute ssd1331(...) or sh1106(...) below if using that device
@@ -86,7 +84,6 @@ while True:
             draw.text((x, top+34),   "ADS: %s" % r.json()["ads_blocked_today"], font=font3, fill="white")    
             draw.text((x, top+48),   "QRY: %s" % r.json()["dns_queries_today"], font=font3, fill="white")
 
-        #draw.text((x, top), "test", fill="white")
         zaehler2 += 1
         sleep(1)
 
