@@ -10,7 +10,7 @@ Installing the dependencies
 - sudo apt update
 - sudo apt upgrade
 
-- sudo apt-get install -y python3 python3-dev python-smbus i2c-tools python3-pil python3-pip python3-setuptools python3-rpi.gpio libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7 libtiff5 git python3-gpiozero python3-imaging
+- sudo apt-get install -y python3 python3-dev python3-smbus i2c-tools python3-pil python3-pip python3-setuptools python3-rpi.gpio libjpeg-dev zlib1g-dev libfreetype6-dev liblcms2-dev libopenjp2-7 libtiff5 git python3-gpiozero python3-pil
 - sudo -H pip3 install luma.oled
 - sudo usermod -a -G spi,gpio,i2c pi
 
